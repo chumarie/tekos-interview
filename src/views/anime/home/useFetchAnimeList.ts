@@ -3,6 +3,7 @@ import { useQuery } from 'react-query';
 
 import apiClient from 'services/api-client';
 
+
 export default function useFetchAnimeList() {
     const client = apiClient();
     
@@ -14,7 +15,6 @@ export default function useFetchAnimeList() {
     ['anime-list'],
     fetcher
   );
-    
     
   return {
     data,
