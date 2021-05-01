@@ -21,8 +21,6 @@ export default function AnimeModal({ open, onClose, id }: Props) {
 
   const { title, synopsis } = data;
 
-  console.log("data", data);
-
   return (
     <Modal open={open} onClose={onClose}>
       <DialogTitle id="alert-dialog-slide-title">{title}</DialogTitle>

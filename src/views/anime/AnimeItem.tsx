@@ -10,6 +10,7 @@ interface Props {
   synopsis: string;
   episodes: number;
   mal_id: number;
+  score: number;
 }
 export default function AnimeItem({
   title,
@@ -17,6 +18,7 @@ export default function AnimeItem({
   synopsis,
   episodes,
   mal_id,
+  score,
 }: Props): ReactElement {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -30,6 +32,7 @@ export default function AnimeItem({
   return (
     <>
       <Card
+        score={score}
         title={title}
         imgUrl={image_url}
         description={synopsis}

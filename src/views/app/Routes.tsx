@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-const AnimeHomePage = lazy(() => import("../anime/home/AnimeHomePage"));
+const AnimeHomePage = lazy(() => import("../anime/AnimeHomePage"));
 
 const Routes = () => (
   <Router>
