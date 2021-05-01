@@ -1,5 +1,5 @@
-import React from "react";
-import type { ReactElement } from "react";
+import type { ReactElement, ChangeEvent } from "react";
+import { useState } from "react";
 import {
   fade,
   makeStyles,
@@ -11,6 +11,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import InputBase from "@material-ui/core/InputBase";
 import SearchIcon from "@material-ui/icons/Search";
+import { Button } from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -63,7 +64,17 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export default function Header(): ReactElement {
+interface Props {
+  query?: string;
+  onQueryChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  onQuerySubmit: () => void;
+}
+
+export default function Header({
+  query = "",
+  onQueryChange,
+  onQuerySubmit,
+}: Props): ReactElement {
   const classes = useStyles();
 
   return (
@@ -78,13 +89,18 @@ export default function Header(): ReactElement {
               <SearchIcon />
             </div>
             <InputBase
+              onChange={onQueryChange}
               placeholder="Search…"
+              defaultValue={query}
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
               }}
               inputProps={{ "aria-label": "search" }}
             />
+            <Button color="inherit" onClick={onQuerySubmit}>
+              Rechercher
+            </Button>
           </div>
           <div className={classes.grow} />
         </Toolbar>

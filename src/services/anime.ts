@@ -11,14 +11,14 @@ interface GetAllResponse {
 interface GetOneResponse extends AnimeDetail{};
 
 interface AnimeApi {
-  getAll: () => Promise<GetAllResponse>;
+  getAll: (params:string) => Promise<GetAllResponse>;
   getOne: (id: number) => Promise<GetOneResponse>
 }
 
 export default function animeApi(): AnimeApi {
   return {
-    async getAll(): Promise<GetAllResponse> {
-      const {data: {results, last_page}} = await axios.get(`${ANIME_API}/search/anime?q=Ghibli&page=1`);
+    async getAll(params: string): Promise<GetAllResponse> {
+      const {data: {results, last_page}} = await axios.get(`${ANIME_API}/search/anime${params}`);
       return {items: results, totalPages: last_page};
     },
     async getOne(id: number): Promise<GetOneResponse> {
