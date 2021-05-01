@@ -1,4 +1,4 @@
-export default interface Anime {
+export interface Anime {
     "mal_id": number;
     "url": string;
     "image_url": string;

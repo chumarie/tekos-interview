@@ -14,7 +14,9 @@ export default function useFetchAnimeList() {
     ['anime-list'],
     fetcher
   );
+    
 
+    
   return {
     data,
     error,
