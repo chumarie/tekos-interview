@@ -10,7 +10,7 @@ export default function useFetchAnimeList(search: string) {
 
 
   const qValue = (parsedSearch.q && parsedSearch.q.length >= 3) ? parsedSearch.q : "Ghibli";
-  const formatSearch = { limit: 10, page: 1, ...parsedSearch, q: qValue };
+  const formatSearch = { limit: 12, page: 1, ...parsedSearch, q: qValue };
   
   const stringifySearch = stringifyQuery(formatSearch);
   const fetcher = useCallback(() => client.anime.getAll(stringifySearch), [client, stringifySearch]);

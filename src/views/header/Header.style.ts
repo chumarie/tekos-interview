@@ -5,15 +5,12 @@ export const HeaderContainer = styled.div`
     padding: 20px;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #ddd;
-
-    *:focus {
-    outline: none;
-    }
+    font-weight: bold;
+    border: 1px solid #ddd;
+    background-color: #fff;
 
     .MuiButton-root {
         height: 40px;
-
     }
 
 `;

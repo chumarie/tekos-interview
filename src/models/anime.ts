@@ -28,4 +28,6 @@ export interface AnimeDetail {
     "end_date": string;
     "members": number;
     "rated": string;
+    "title_japanese": string;
+    "status": string;
 }

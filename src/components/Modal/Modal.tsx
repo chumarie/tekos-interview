@@ -15,8 +15,8 @@ export default function Modal({ open, onClose, children }: Props) {
       <Dialog open={open} keepMounted onClose={onClose}>
         {children}
         <DialogActions>
-          <Button onClick={onClose} color="primary">
-            Fermer
+          <Button onClick={onClose} color="secondary">
+            Close
           </Button>
         </DialogActions>
       </Dialog>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { ReactElement } from "react";
+
 import Card from "components/Card/Card";
 
 import AnimeModal from "./AnimeModal";

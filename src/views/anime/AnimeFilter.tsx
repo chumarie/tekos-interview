@@ -53,7 +53,7 @@ export default function AnimeFilter({
     <Select
       variant="outlined"
       value={parsedSearch.sort || "desc"}
-      onChange={onStatusChange}
+      onChange={onSortChange}
     >
       <MenuItem value="desc">Descending</MenuItem>
       <MenuItem value="asc">Ascending</MenuItem>

@@ -9,6 +9,10 @@ export const ItemCard = styled(Card)`
     flex-direction: column;
     justify-content: space-between;
 
+    svg {
+        fill: #ffb35e;
+    }
+
     .MuiCardHeader-content {
         width: 100%;
     }
